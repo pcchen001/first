@@ -31,7 +31,7 @@ CREATE TABLE users (
 INSERT INTO users (name, email) VALUES ('夥伴', 'partner@example.com');
 
 第三步：編寫後端程式碼 (PHP)
-在 C:\laragon\www\my_first_app 資料夾下建立一個 index.php 檔案，並貼入以下程式碼：
+在 C:\laragon\www\first 資料夾下建立一個 index.php 檔案，並貼入以下程式碼：
 <?php
 // 後端邏輯：連接資料庫
 $host = 'localhost';
@@ -78,10 +78,11 @@ try {
 確認服務運作：確保 Laragon 的 Apache 與 MySQL 狀態為「Started」。
 
 瀏覽網頁：
-
 你可以點擊 Laragon 介面的 「Web」 進入 localhost。
+http://localhost/first
 
 或是直接在瀏覽器輸入 http://my_first_app.test（Laragon 會自動幫你設定好這個虛擬網址）。
+
 
 ------------
 雖然 Laragon 預設使用 HeidiSQL（一個桌面端的資料庫管理工具），但對於全端開發學習者來說，使用網頁介面的 phpMyAdmin 的確更直觀，且與許多線上虛擬主機的環境一致。
@@ -128,8 +129,8 @@ try {
 $cfg['Servers'][$i]['AllowNoPassword'] = true;
 
 phpMyAdmin 與 HeidiSQL 的差異
-功能,phpMyAdmin,HeidiSQL
-介面類型,網頁版 (Web-based),桌面軟體 (Desktop App)
+功能,   phpMyAdmin,         HeidiSQL
+介面類型,網頁版 (Web-based), 桌面軟體 (Desktop App)
 學習重點,適合練習網頁與資料庫互動,適合處理大量數據與複雜查詢
 環境一致性,與大多數 Linux 伺服器環境相同,僅限 Windows 環境使用
 
